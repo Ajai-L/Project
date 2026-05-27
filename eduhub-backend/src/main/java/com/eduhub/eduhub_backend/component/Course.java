@@ -1,35 +1,37 @@
-package com.eduhub.eduhub_backend.component;
+package com.eduhub.eduhub_backend.Component;
 
-@SuppressWarnings("unused")
+import org.springframework.stereotype.Component;
+
+@Component
 public class Course {
-
-    private final String courseCode;
-    private String subjectName;
-    private int credits;
-
-    public Course(String courseCode, String subjectName, int credits) {
-        this.courseCode = courseCode;
-        this.subjectName = subjectName;
-        this.credits = credits;
+    private String name;
+    private String code;
+    private int credit;
+    public Course() {
+    }
+    public Course(String name, String code, int credit) {
+        this.name = name;
+        this.code = code;
+        this.credit = credit;
     }
 
-    public String getCourseCode() {
-        return courseCode;
+    public String getName() {
+        return name;
     }
 
-    public String getSubjectName() {
-        return subjectName;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public void setSubjectName(String subjectName) {
-        this.subjectName = subjectName;
+    public String getCode() {
+        return code;
     }
-
-    public int getCredits() {
-        return credits;
+    public void setCode(String code) {
+        this.code = code;
     }
-
-    public void setCredits(int credits) {
-        this.credits = credits;
+    public int getCredit() {
+        return credit;
+    }
+    public void setCredit(int credit) {
+        this.credit = credit;
     }
 }

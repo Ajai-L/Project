@@ -1,13 +1,29 @@
-package com.eduhub.eduhub_backend.component;
+package com.eduhub.eduhub_backend.Component;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Student {
     private int id;
-    private String firstName;
-    private String lastName;
-
-    public Student(int id, String firstName, String lastName) {
+    private String name;
+    public Student() {}
+    public Student(int id, String name) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
